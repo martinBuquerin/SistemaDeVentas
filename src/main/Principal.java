@@ -64,11 +64,13 @@ public class Principal {
         or2.agregarProducto(p1);
         or2.agregarProducto(p1);
        */ 
-        or1.mostrarOrden();
+        //or1.mostrarOrden();
         
         Datos dat =  new implementacion();
         
-        dat.escribir(or1);
+        dat.escribir(or1,"test.txt");
+        
+        dat.leer();
         //Datos data = new implementacion();
     
         

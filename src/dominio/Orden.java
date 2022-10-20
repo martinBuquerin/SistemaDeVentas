@@ -31,7 +31,7 @@ public class Orden {
         }
          else{
                 System.out.println("\n");
-                System.out.println("¡Ups limite máximo de productos alcanzado!");
+                System.out.println("¡Ups limite máximo de productos alcanzado!\n");
             }
 
         
@@ -49,19 +49,27 @@ public class Orden {
     }
 
     public String  mostrarOrden(){
+        double total = calcularTotal();
         System.out.println("\nOrden id: "+ idOrden);
-        
+        System.out.println("\n\tID"+"\tNOMBRE"+"\tPRECIO");       
+        System.out.println("\t--"+"\t------"+"\t------");
         for(Producto p: productos){
-            System.out.print ("\t\t"+p.getNombre()+"   "+ p.getPrecio()+ " €");
+            System.out.print ("\t"+p.getIdProducto()+"\t"+p.getNombre()+"\t"+ p.getPrecio()+ " €");
             System.out.println();
            
         }
-        double total = calcularTotal();
+       
         System.out.println("\nImporte total: " +total+ " €\n");
         return "";
     }
         
-    
+    public ArrayList<Producto> getProducto() {
+        return productos;
+    }
+
+    public int getIdOrden() {
+        return idOrden;
+    }
 
     @Override
     public String toString() {

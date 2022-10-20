@@ -1,0 +1,17 @@
+
+Orden id: 1
+
+	ID	NOMBRE	PRECIO
+	--	------	------
+	2	Leche	5.5 €
+	10	Fresa	3.5 €
+	10	Fresa	3.5 €
+	10	Fresa	3.5 €
+	10	Fresa	3.5 €
+	10	Fresa	3.5 €
+	10	Fresa	3.5 €
+	10	Fresa	3.5 €
+	10	Fresa	3.5 €
+	10	Fresa	3.5 €
+
+Total: 37.0 €
