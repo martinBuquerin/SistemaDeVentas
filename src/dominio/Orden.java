@@ -12,6 +12,7 @@ public class Orden {
     ArrayList<Producto> productos= new ArrayList();
     private static int contadorOdenes=1;
     private static int MAX_PRODUCTOS= 10;
+   
 
     
     public Orden() {
@@ -23,10 +24,19 @@ public class Orden {
         System.out.println("\n");
         System.out.println("Se estan agregando los productos....."); 
         
-     
-        if(productos.size()<MAX_PRODUCTOS){
+        int cantidad=1;
+        if(productos.size()<MAX_PRODUCTOS || productos.contains(product)==true){
+            
+           
+            if(productos.contains(product)==true){
+                cantidad = product.getCantidadProductos();
+                cantidad++;
+                product.setCantidadProductos(cantidad);
+                
+            }
             productos.add(product);
-            System.out.println("\n");
+            
+//System.out.println("\n"+product.getIdProducto());
             System.out.println("¡Producuctos agregados correctamentes!");
         }
          else{
@@ -41,7 +51,7 @@ public class Orden {
         double cuenta=0;
         
         for(Producto p: productos){
-           cuenta += p.getPrecio();
+           cuenta += p.getPrecio()*p.getCantidadProductos();
 
         }
         
@@ -51,10 +61,10 @@ public class Orden {
     public String  mostrarOrden(){
         double total = calcularTotal();
         System.out.println("\nOrden id: "+ idOrden);
-        System.out.println("\n\tID"+"\tNOMBRE"+"\tPRECIO");       
-        System.out.println("\t--"+"\t------"+"\t------");
+        System.out.println("\n\tID"+"\tNOMBRE "+"\tCANTIDAD"+"\tPRECIO");       
+        System.out.println("\t--"+"\t------"+"\t--------"+"\t------");
         for(Producto p: productos){
-            System.out.print ("\t"+p.getIdProducto()+"\t"+p.getNombre()+"\t"+ p.getPrecio()+ " €");
+            System.out.print ("\t"+p.getIdProducto()+"\t"+p.getNombre()+"\t  "+p.getCantidadProductos()+"\t\t"+p.getPrecio()+ " €");
             System.out.println();
            
         }

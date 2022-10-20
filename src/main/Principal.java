@@ -33,16 +33,14 @@ public class Principal {
         Orden or3 = new Orden();
      
         or1.agregarProducto(p2);
+        or1.agregarProducto(p2);
         or1.agregarProducto(p10);
+        or1.agregarProducto(p2);
         or1.agregarProducto(p10);
-        or1.agregarProducto(p10);
-        or1.agregarProducto(p10);
-        or1.agregarProducto(p10);
-        or1.agregarProducto(p10);
-        or1.agregarProducto(p10);
-        or1.agregarProducto(p10);
-        or1.agregarProducto(p10);
-        or1.agregarProducto(p10);
+        or1.agregarProducto(p1);
+        or1.agregarProducto(p3);
+        or1.agregarProducto(p3);
+
     
     
     
@@ -64,7 +62,7 @@ public class Principal {
         or2.agregarProducto(p1);
         or2.agregarProducto(p1);
        */ 
-        //or1.mostrarOrden();
+       // or1.mostrarOrden();
         
         Datos dat =  new implementacion();
         

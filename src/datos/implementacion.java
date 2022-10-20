@@ -78,8 +78,9 @@ public class implementacion implements Datos{
         try {//obtengo el Orden id
             salida = new PrintWriter(archivo);
             salida.print("\nOrden id: "+ o1.getIdOrden()+"\n");
-            salida.print("\n\tID"+"\tNOMBRE"+"\tPRECIO\n");       
-            salida.print("\t--"+"\t------"+"\t------\n");
+            
+            salida.print("\n\tID"+"\tNOMBRE "+"\tCANTIDAD"+"\tPRECIO\n");       
+            salida.print("\t--"+"\t------"+"\t--------"+"\t------\n");
         } catch (IOException ex) {
             ex.printStackTrace(System.out);
         }finally{
@@ -90,7 +91,8 @@ public class implementacion implements Datos{
         for(int i=0; i<prodArray.size(); i++){//recorro el array clonada para insertar en el documento cada producto
             try {
                 salida = new PrintWriter(new FileWriter(nombre, true));
-                salida.print("\t"+prodArray.get(i).getIdProducto()+"\t"+prodArray.get(i).getNombre()+"\t"+prodArray.get(i).getPrecio()+" €"+"\n");
+                salida.print("\t"+prodArray.get(i).getIdProducto()+"\t"+prodArray.get(i).getNombre()+"\t  "+prodArray.get(i).getCantidadProductos()+"\t\t"+prodArray.get(i).getPrecio()+ " €"+"\n");
+                 
    
 
             } catch (IOException ex) {
