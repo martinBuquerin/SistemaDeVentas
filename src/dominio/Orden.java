@@ -9,7 +9,7 @@ import java.util.ArrayList;
  */
 public class Orden {
     private int idOrden;
-    static ArrayList<Producto> productos= new ArrayList();
+    ArrayList<Producto> productos= new ArrayList();
     private static int contadorOdenes=1;
     private static int MAX_PRODUCTOS= 10;
 
@@ -19,7 +19,7 @@ public class Orden {
     }
 
     
-    public static void agregarProducto(Producto product){
+    public void agregarProducto(Producto product){
         System.out.println("\n");
         System.out.println("Se estan agregando los productos....."); 
         
@@ -48,15 +48,20 @@ public class Orden {
         return cuenta;
     }
 
-    public void mostrarOrden(){
+    public String  mostrarOrden(){
         System.out.println("\nOrden id: "+ idOrden);
         
         for(Producto p: productos){
             System.out.print ("\t\t"+p.getNombre()+"   "+ p.getPrecio()+ " €");
             System.out.println();
+           
         }
-        System.out.println("\nImporte total: "+calcularTotal()+" €\n");
+        double total = calcularTotal();
+        System.out.println("\nImporte total: " +total+ " €\n");
+        return "";
     }
+        
+    
 
     @Override
     public String toString() {

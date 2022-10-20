@@ -1,6 +1,8 @@
 package main;
 
 
+import datos.Datos;
+import datos.implementacion;
 import dominio.Producto;
 import dominio.Orden;
 
@@ -30,21 +32,24 @@ public class Principal {
         Orden or2 = new Orden();
         Orden or3 = new Orden();
      
-        or1.agregarProducto(p1);
         or1.agregarProducto(p2);
-        or1.agregarProducto(p3);
-        or1.agregarProducto(p4);
-        or1.agregarProducto(p5);
-        or1.agregarProducto(p6);
-        or1.agregarProducto(p7);
-        or1.agregarProducto(p8);
-        or1.agregarProducto(p9);
         or1.agregarProducto(p10);
         or1.agregarProducto(p10);
-        or1.agregarProducto(p1);
-        or1.agregarProducto(p1);
+        or1.agregarProducto(p10);
+        or1.agregarProducto(p10);
+        or1.agregarProducto(p10);
+        or1.agregarProducto(p10);
+        or1.agregarProducto(p10);
+        or1.agregarProducto(p10);
+        or1.agregarProducto(p10);
+        or1.agregarProducto(p10);
+    
+    
+    
+    
+    
         
-        
+      /*
         or1.agregarProducto(p1);
         or2.agregarProducto(p2);
         or2.agregarProducto(p3);
@@ -58,12 +63,13 @@ public class Principal {
         or2.agregarProducto(p10);
         or2.agregarProducto(p1);
         or2.agregarProducto(p1);
-        
+       */ 
         or1.mostrarOrden();
-        or2.mostrarOrden();
-
         
+        Datos dat =  new implementacion();
         
+        dat.escribir(or1);
+        //Datos data = new implementacion();
     
         
     }
